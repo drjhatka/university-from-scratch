@@ -1,5 +1,5 @@
-import { Schema } from "mongoose";
-import { TUser } from "./user.interface";
+import { model, Schema } from "mongoose";
+import { TUser } from './user.interface';
 import { UserRolesArray, UserStatusArray } from "./userEnums";
 
 const userSchema = new Schema<TUser>({
@@ -33,7 +33,7 @@ const userSchema = new Schema<TUser>({
     status: {
         type: String,
         enum: UserStatusArray,
-        default:'active'
+        default: 'active'
     },
     isDeleted: {
         type: Boolean,
@@ -42,3 +42,5 @@ const userSchema = new Schema<TUser>({
 },
     { timestamps: true }
 )
+
+export const User = model<TUser>('User', userSchema) //create model from schema and export
