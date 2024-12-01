@@ -4,9 +4,12 @@ import { UserController } from './user.controller'
 export const router = express.Router()
 
 //define user routes
+router.post('/create-admin', UserController.createAdmin)
+router.post('/create-student', UserController.createStudent)
+router.post('/create-faculty', UserController.createFaculty)
+router.post('/create-employee', UserController.createEmployee)
 
-router.post('/create-student', UserController.createUser)
-
+export const UserRoutes = router;
 
 
 

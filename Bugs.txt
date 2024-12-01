@@ -1,0 +1,6 @@
+#1
+    Problem --> process.cwd() doesn't work for config file ---> 
+    Partial Solution--> Workaround is hardcoding the path
+
+#2 Not a bug but logical error
+    Controller function should have predefined Request and Response.. The order is important

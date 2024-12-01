@@ -1,10 +1,22 @@
-import { TUser } from "./user.interface";
+import { Request, Response } from "express";
 
-const createUser = (user:TUser)=>{
-
+const createAdmin = (req: Request, res: Response) => {
+    
+}
+const createStudent = (req: Request, res: Response) => {
+    
+}
+const createFaculty = (req: Request, res: Response) => {
+    
+}
+const createEmployee = (req: Request, res: Response) => {
+    
 }
 
 
 export const UserController = {
-    createUser,
+    createAdmin,
+    createStudent,
+    createFaculty,
+    createEmployee
 }
